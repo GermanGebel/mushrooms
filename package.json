@@ -5,10 +5,11 @@
   "description": "Одностраничное приглашение на грибной день рождения (нео-брутализм), защищённое токеном через StatiCrypt.",
   "scripts": {
     "build:css": "tailwindcss -c tailwind.config.js -i src/tailwind.css -o build/tw.css --minify && node scripts/inline-css.js",
-    "build": "npm run build:css && staticrypt src/index.html -d docs && node -e \"require('fs').writeFileSync('docs/.nojekyll','')\"",
+    "build": "npm run build:css && node scripts/inline-audio.js && staticrypt build/index.html -d docs && node -e \"require('fs').writeFileSync('docs/.nojekyll','')\"",
     "preview": "npx --yes serve src -l 5000"
   },
   "devDependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
     "staticrypt": "^3.5.0",
     "tailwindcss": "^3.4.17"
   }
