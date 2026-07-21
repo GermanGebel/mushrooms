@@ -438,8 +438,8 @@
   <div id="train" class="absolute bottom-1 left-0 will-change-transform drop-shadow">
     <div class="chug whitespace-nowrap text-3xl leading-none">💨🚂🍄🧺🍓🎉</div>
   </div>
-  <!-- бутстрап поезда: inline onload/onerror срабатывает даже во вставленном StatiCrypt-контенте, где <script> не выполняется -->
-  <img alt="" aria-hidden="true" style="display:none" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" onload="(function(){if(window.__trainInit)return;window.__trainInit=1;var t=document.getElementById('train');function m(){var mx=document.documentElement.scrollHeight-window.innerHeight;var p=mx>0?Math.min(1,Math.max(0,window.pageYOffset/mx)):0;if(t)t.style.transform='translateX('+(-15+p*122)+'vw)';}m();window.addEventListener('scroll',m,{passive:true});window.addEventListener('resize',m);})()" onerror="this.onload&&this.onload()">
+  <!-- бутстрап поезда + автозапуск музыки: inline onload/onerror срабатывает даже во вставленном StatiCrypt-контенте, где <script> не выполняется -->
+  <img alt="" aria-hidden="true" style="display:none" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" onload="(function(){if(window.__init)return;window.__init=1;var t=document.getElementById('train');function m(){var mx=document.documentElement.scrollHeight-window.innerHeight;var p=mx>0?Math.min(1,Math.max(0,window.pageYOffset/mx)):0;if(t)t.style.transform='translateX('+(-15+p*122)+'vw)';}m();window.addEventListener('scroll',m,{passive:true});window.addEventListener('resize',m);var a=document.getElementById('bgm'),btn=document.getElementById('musicBtn');function ok(){if(btn)btn.textContent='🔊 играет';}function off(){['pointerdown','touchstart','keydown'].forEach(function(ev){document.removeEventListener(ev,go,true);});}function go(e){if(e&&e.target&&e.target.closest&&e.target.closest('#musicBtn'))return;if(a)a.play().then(ok).catch(function(){});off();}if(a)a.play().then(ok).catch(function(){['pointerdown','touchstart','keydown'].forEach(function(ev){document.addEventListener(ev,go,true);});});})()" onerror="this.onload&&this.onload()">
 </div>
 
 <!-- ================= МУЗЫКА ================= -->
