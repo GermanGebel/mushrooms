@@ -5,3 +5,4 @@ SECRET.md
 *.log
 .staticrypt/
 staticrypt.config.json
+.staticrypt.json
