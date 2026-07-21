@@ -1,0 +1,13 @@
+{
+  "name": "mushroom-birthday",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Одностраничное приглашение на грибной день рождения (нео-брутализм), защищённое токеном через StatiCrypt.",
+  "scripts": {
+    "build": "staticrypt src/index.html -d docs && node -e \"require('fs').writeFileSync('docs/.nojekyll','')\"",
+    "preview": "npx --yes serve src -l 5000"
+  },
+  "devDependencies": {
+    "staticrypt": "^3.5.0"
+  }
+}

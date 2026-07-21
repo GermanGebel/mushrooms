@@ -1,0 +1,6 @@
+node_modules/
+SECRET.md
+.DS_Store
+*.log
+.staticrypt/
+staticrypt.config.json
