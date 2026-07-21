@@ -1,4 +1,5 @@
 node_modules/
+build/
 SECRET.md
 .DS_Store
 *.log

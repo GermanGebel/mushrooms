@@ -37,7 +37,9 @@ npm install
 ```bash
 STATICRYPT_PASSWORD='ТВОЙ_ТОКЕН' npm run build
 ```
-Возьмёт `src/index.html`, зашифрует и положит результат в `docs/index.html`
+`npm run build` сначала соберёт Tailwind-CSS и вошьёт его прямо в страницу
+(она становится самодостаточной — работает без интернета и переживает шифрование),
+затем зашифрует `src/index.html` и положит результат в `docs/index.html`
 (плюс `docs/.nojekyll`, чтобы Pages не трогал файлы).
 
 ### 3. Запушить
@@ -62,6 +64,11 @@ git add docs && git commit -m "deploy" && git push
 
 Открытый `src/` GitHub Pages **не отдаёт** — его видно только тем, у кого есть
 доступ к приватному репозиторию.
+
+> Стили Tailwind **вшиты** в `src/index.html` (между маркерами `TW:START`/`TW:END`).
+> Если поменял(а) Tailwind-классы — просто снова запусти `npm run build` (или
+> `npm run build:css`), он пересоберёт и вошьёт CSS. Локальный предпросмотр:
+> открой `src/index.html` в браузере или `npm run preview`.
 
 ## Фото 🖼️
 Чтобы фото тоже были **под токеном**, встраиваем их прямо в HTML как `base64`
