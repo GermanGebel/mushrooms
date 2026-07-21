@@ -3,23 +3,32 @@ module.exports = {
   content: ['./src/index.html'],
   theme: {
     extend: {
+      fontFamily: {
+        display: ['Unbounded', 'system-ui', 'sans-serif'],
+        body: ['"Golos Text"', 'system-ui', 'sans-serif'],
+      },
+      // числовые веса, которые использует дизайн (font-500 … font-900)
+      fontWeight: {
+        400: '400',
+        500: '500',
+        600: '600',
+        700: '700',
+        800: '800',
+        900: '900',
+      },
       colors: {
-        cream: '#FFF3D6',
-        ink: '#141414',
-        shroom: '#E4572E',
-        moss: '#2F8F3E',
-        mustard: '#FFC53D',
-        sky: '#4C9BE8',
-        grape: '#8B5CF6',
+        ink: '#111111',
+        cream: '#F4ECD8',
+        amanita: '#E8442B',
+        amber: '#F5A623',
+        moss: '#3C7A3C',
+        lilac: '#B08BE8',
+        sky: '#5BC8E8',
       },
       boxShadow: {
-        neoSm: '3px 3px 0 0 #141414',
-        neo: '6px 6px 0 0 #141414',
-        neoLg: '10px 10px 0 0 #141414',
-      },
-      fontFamily: {
-        display: ['"Archivo Black"', 'system-ui', 'sans-serif'],
-        body: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
+        brut: '8px 8px 0 0 #111111',
+        brutlg: '12px 12px 0 0 #111111',
+        brutsm: '4px 4px 0 0 #111111',
       },
     },
   },
